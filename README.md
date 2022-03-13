@@ -1,5 +1,10 @@
 # Meet-Comment-VIS
 
+## 実行方法
+- git clone
+- npm i
+- npm run build
+
 ## シーケンス図
 ```mermaid
 sequenceDiagram
