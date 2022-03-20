@@ -1,14 +1,17 @@
 # Meet-Comment-VIS
 
 ## ブランチ規則
+
 - feature-#{issue番号}-{作業内容}
 
 ## 環境構築
+
 - git clone
 - npm i
 - npm run build
 
 ## シーケンス図
+
 ```mermaid
 sequenceDiagram
   autonumber
