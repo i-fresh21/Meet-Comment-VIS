@@ -1,7 +1,7 @@
 # Meet-Comment-VIS
 
 ## ブランチ規則
-- feature-#{issue番号}-${作業していること}
+- feature-#{issue番号}-{作業内容}
 
 ## 環境構築
 - git clone
