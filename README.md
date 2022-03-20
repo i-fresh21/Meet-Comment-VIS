@@ -1,6 +1,9 @@
 # Meet-Comment-VIS
 
-## 実行方法
+## ブランチ規則
+- feature-#{issue番号}-${作業していること}
+
+## 環境構築
 - git clone
 - npm i
 - npm run build
