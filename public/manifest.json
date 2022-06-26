@@ -3,10 +3,28 @@
   "version": "1.0.0",
   "manifest_version": 3,
   "description": "Sample Chrome Extension",
-  "content_scripts": [{
-    "matches": ["https://meet.google.com/*"],
-    "js": [
-      "content.js"
-    ]
-  }]
+  "content_scripts": [
+    {
+      "matches": [
+        "https://meet.google.com/*"
+      ],
+      "run_at": "document_start",
+      "js": [
+        "main.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "./*"
+      ],
+      "matches": [
+        "https://meet.google.com/*"
+      ]
+    }
+  ]
 }

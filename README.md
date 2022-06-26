@@ -17,3 +17,8 @@ sequenceDiagram
   google meet->>+MCVIS: コメント取得
   MCVIS-->>+google meet: コメントをmeet画面に反映
 ```
+
+## ビルドコマンド
+```
+npm run build
+```
