@@ -1,8 +1,8 @@
-export const CLASS_OBJ = {
+export const MEET_CONTENTS = {
     thread: 'z38b6',
     messages: 'oIy2qc',
 }
-export const INPUT_AREA = 'textarea[name="chatTextInput"]'
+export const CHAT_TEXT_INPUT_AREA = 'textarea[name="chatTextInput"]'
 export const OBSERVE_CONFIG = {
     attributes: true,
     subtree: true,

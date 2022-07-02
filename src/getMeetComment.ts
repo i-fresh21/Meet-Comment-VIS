@@ -1,20 +1,20 @@
-import { CLASS_OBJ, INPUT_AREA ,OBSERVE_CONFIG } from './const';
+import { MEET_CONTENTS, CHAT_TEXT_INPUT_AREA ,OBSERVE_CONFIG } from './const';
 
 let prevThread: any;
 const observer = new MutationObserver((records) => {
     try {
+        const thread = document.getElementsByClassName(MEET_CONTENTS.thread)[0];
 
-        const thread = document.getElementsByClassName(CLASS_OBJ.thread)[0];
+        const isNonComments = prevThread != undefined && thread.isEqualNode(prevThread);
+        if (isNonComments) return
 
-        if (prevThread != undefined && thread.isEqualNode(prevThread)) return
-        if (thread.getElementsByClassName('gYckH').length == 1) return
+        const isGYckHClass = thread.getElementsByClassName('gYckH').length < 1
+        if (isGYckHClass) return
 
-        prevThread = thread.cloneNode(true)
+        prevThread = thread.cloneNode(true);
 
-        const messages = thread.getElementsByClassName(CLASS_OBJ.messages);
-        const message = (messages[messages.length - 1] as HTMLElement).innerText;
-        // 動確用
-        console.log("message:" + message);
+        const messages = thread.getElementsByClassName(MEET_CONTENTS.messages);
+        const message = (messages[messages.length - 1] as HTMLElement)?.innerText;
     }
     catch (e) {
         return
