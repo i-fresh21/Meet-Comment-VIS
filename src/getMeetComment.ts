@@ -5,11 +5,8 @@ const observer = new MutationObserver((records) => {
     try {
         const thread = document.getElementsByClassName(MEET_CONTENTS.thread)[0];
 
-        const isNonComments = prevThread != undefined && thread.isEqualNode(prevThread);
-        if (isNonComments) return
-
-        const isGYckHClass = thread.getElementsByClassName('gYckH').length < 1
-        if (isGYckHClass) return
+        if (prevThread != undefined && thread.isEqualNode(prevThread)) return
+        if (thread.getElementsByClassName(MEET_CONTENTS.exclusion_messages).length < 1) return
 
         prevThread = thread.cloneNode(true);
 
@@ -24,5 +21,6 @@ const observer = new MutationObserver((records) => {
 document.addEventListener('DOMContentLoaded', () => {
     const elem = document.body
     observer.observe(elem, OBSERVE_CONFIG)
+    
 
 })
